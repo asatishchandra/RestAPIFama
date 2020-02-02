@@ -29,11 +29,14 @@ public class NumToEnglishSvc {
     }
     
     private static String converToWordsHelper(long num) {
-	    if (num < 0)
+    	if(num==0)
+	    	return "Zero";
+    	
+    	if (num < 0)
 	    {
 	        return "Minus " + converToWordsHelper(-num);
 	    }
-	
+	    
 	    if (num < 20)
 	    {
 	        return units[(int) num];
